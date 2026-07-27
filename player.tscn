@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cm70t4hn2qib2"]
+
+[ext_resource type="Texture2D" uid="uid://dkrfemapwfb50" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d2egl55heyfa6" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x50g6"]
+size = Vector2(58, 58)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x50g6"]
+radius = 51.47815
+
+[node name="Player" type="CharacterBody2D" unique_id=1154717214]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2068303343]
+scale = Vector2(0.45312497, 0.45312497)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280378980]
+shape = SubResource("RectangleShape2D_x50g6")
+
+[node name="PickupZone" type="Area2D" parent="." unique_id=937801377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone" unique_id=652572775]
+shape = SubResource("CircleShape2D_x50g6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=333546923]
+position_smoothing_enabled = true
