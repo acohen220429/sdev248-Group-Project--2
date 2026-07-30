@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cm70t4hn2qib2" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="Texture2D" uid="uid://da01l61kks4u1" path="res://Assets/final project tilemap.png" id="1_vonw3"]
+[ext_resource type="Script" uid="uid://ctv8x23lgvus0" path="res://kill_zone.gd" id="3_oi3di"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vonw3"]
 
@@ -121,6 +122,12 @@ custom_data_layer_0/name = "PowerUpType"
 custom_data_layer_0/type = 2
 sources/0 = SubResource("TileSetAtlasSource_0b4ue")
 
+[sub_resource type="LabelSettings" id="LabelSettings_x50g6"]
+font_size = 27
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x50g6"]
+size = Vector2(8114, 25.5)
+
 [node name="level" type="Node2D" unique_id=999678901]
 
 [node name="BackgroundTileMap" type="TileMapLayer" parent="." unique_id=1913123699]
@@ -134,4 +141,22 @@ tile_map_data = PackedByteArray("AAAUABcAAAAAAAIAAAAVABcAAAAAAAIAAAAWABcAAAAAAAI
 tile_set = SubResource("TileSet_t0got")
 
 [node name="Player" parent="." unique_id=1154717214 instance=ExtResource("1_u52ul")]
-position = Vector2(217, 360)
+position = Vector2(223, 366)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=867350873]
+
+[node name="CoinLabel" type="Label" parent="HUD" unique_id=2146400592]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 94.0
+offset_bottom = 46.0
+text = "Coins: 0"
+label_settings = SubResource("LabelSettings_x50g6")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1272588238]
+collision_layer = 0
+script = ExtResource("3_oi3di")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1644248411]
+position = Vector2(4204, 487)
+shape = SubResource("RectangleShape2D_x50g6")
