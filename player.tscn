@@ -27,5 +27,5 @@ shape = SubResource("RectangleShape2D_x50g6")
 shape = SubResource("CircleShape2D_x50g6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=333546923]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(2.3, 2.3)
 position_smoothing_enabled = true
