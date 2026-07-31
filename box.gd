@@ -1,24 +1,22 @@
 extends CharacterBody2D
 
 const THROW_SPEED := 500.0
-const THROW_UPWARD_SPEED := -100.0
-const GRAVITY := 1200.0
 
 var carried := false
 var flying := false
 var holder: Node2D = null
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if carried:
 		return
 
 	if flying:
-		velocity.y += GRAVITY * delta
-
-		var collision := move_and_collide(velocity * delta)
+		var collision := move_and_collide(velocity * _delta)
 
 		if collision:
+			flying = false
+			velocity = Vector2.ZERO
 			queue_free()
 	else:
 		velocity = Vector2.ZERO
@@ -51,8 +49,21 @@ func throw_box() -> void:
 
 	var old_holder := holder
 	var level := old_holder.get_parent()
+	var release_y := old_holder.global_position.y
+
+	var direction := 1.0
+
+	if old_holder.has_method("get_facing_direction"):
+		direction = old_holder.get_facing_direction()
 
 	reparent(level, true)
+
+	global_position.y = release_y
+
+	var old_holder_body := old_holder as CharacterBody2D
+
+	if old_holder_body != null:
+		add_collision_exception_with(old_holder_body)
 
 	carried = false
 	flying = true
@@ -60,14 +71,9 @@ func throw_box() -> void:
 	collision_layer = 1
 	collision_mask = 1
 
-	var direction := 1.0
-
-	if old_holder.has_method("get_facing_direction"):
-		direction = old_holder.get_facing_direction()
-
 	velocity = Vector2(
 		direction * THROW_SPEED,
-		THROW_UPWARD_SPEED
+		0.0
 	)
 
 	holder = null

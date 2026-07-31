@@ -102,7 +102,7 @@ script = ExtResource("1_onrkg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1386468596]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_x50g6")
-animation = &"fall"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280378980]
 shape = SubResource("RectangleShape2D_x50g6")
