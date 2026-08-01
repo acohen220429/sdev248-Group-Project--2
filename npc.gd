@@ -5,7 +5,7 @@ extends Node2D
 var intro_lines: Array[String] = [
 	"Hey kid! I heard you got some kind of lawsuits goin' on.",
 	"I'll be your lawyer but you gotta get me that chedda' if you expect me to work for you.",
-	"Let's say you get me 17 coins? That oughta be enough.",
+	"Let's say you get me 14 coins? That oughta be enough.",
 	"Don't try and swindle me either, the Judge will know..."
 ]
 var repeat_line := "Go make that money kid!"
