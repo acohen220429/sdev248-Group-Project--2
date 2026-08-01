@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://da01l61kks4u1" path="res://Assets/final project tilemap.png" id="1_vonw3"]
 [ext_resource type="Script" uid="uid://ctv8x23lgvus0" path="res://kill_zone.gd" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://belk36phnurqc" path="res://box.tscn" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://dwx2d1idblg5" path="res://npc.tscn" id="5_f2txt"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vonw3"]
 
@@ -147,6 +148,9 @@ tile_set = SubResource("TileSet_t0got")
 [node name="Player" parent="." unique_id=1154717214 instance=ExtResource("1_u52ul")]
 position = Vector2(223, 366)
 
+[node name="npc" parent="." unique_id=407830274 instance=ExtResource("5_f2txt")]
+position = Vector2(333, 369.00003)
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=867350873]
 
 [node name="CoinLabel" type="Label" parent="HUD" unique_id=2146400592]
@@ -197,3 +201,5 @@ text = "Move with WASD/Arrow Keys
 Pick up and throw boxes with E/Z"
 label_settings = SubResource("LabelSettings_ifasi")
 horizontal_alignment = 1
+
+[editable path="npc"]

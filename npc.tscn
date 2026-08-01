@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dwx2d1idblg5"]
+
+[ext_resource type="Script" uid="uid://co34x356bgdet" path="res://npc.gd" id="1_ideak"]
+[ext_resource type="Texture2D" uid="uid://blpe7cjnnpwql" path="res://lawyer/Cool lawyer.png" id="2_xxcha"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtoym"]
+radius = 1580812.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxcha"]
+font_size = 18
+
+[node name="npc" type="Node2D" unique_id=407830274]
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("1_ideak")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064396726]
+position = Vector2(-6, -100000)
+scale = Vector2(13279.695, 14061.063)
+texture = ExtResource("2_xxcha")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1955768740]
+position = Vector2(-100002, -200002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1356692358]
+position = Vector2(100000, 200000)
+shape = SubResource("CircleShape2D_xtoym")
+
+[node name="DialogueBox" type="Node2D" parent="." unique_id=1611381627]
+position = Vector2(0, -80)
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1357990265]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 556.0
+offset_bottom = 25.0
+label_settings = SubResource("LabelSettings_xxcha")
