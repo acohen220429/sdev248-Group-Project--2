@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://dvyhakt0lh5te"]
+
+[ext_resource type="Script" uid="uid://cblc7y7cv7rua" path="res://black_enemy.gd" id="1_p0dfa"]
+[ext_resource type="Texture2D" uid="uid://bv6ggtc2uwece" path="res://nintendoN_Attack.png" id="2_6foc1"]
+[ext_resource type="PackedScene" uid="uid://7yl3gnt4tpyi" path="res://projectile.tscn" id="2_s0l6n"]
+[ext_resource type="Texture2D" uid="uid://cegwrfg865tnr" path="res://nintendoN_Death.png" id="3_s0l6n"]
+[ext_resource type="Texture2D" uid="uid://bx8mf882chelv" path="res://nintendoN_Idle.png" id="4_x25s1"]
+[ext_resource type="Script" uid="uid://djkxybb7mvs68" path="res://enemy_hitbox.gd" id="5_6foc1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l833"]
+atlas = ExtResource("2_6foc1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps1ao"]
+atlas = ExtResource("2_6foc1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as1t6"]
+atlas = ExtResource("2_6foc1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntv3j"]
+atlas = ExtResource("2_6foc1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sm60"]
+atlas = ExtResource("2_6foc1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4c77"]
+atlas = ExtResource("3_s0l6n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bfwi"]
+atlas = ExtResource("3_s0l6n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enl1w"]
+atlas = ExtResource("3_s0l6n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayyk1"]
+atlas = ExtResource("3_s0l6n")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tbmn"]
+atlas = ExtResource("4_x25s1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg8nu"]
+atlas = ExtResource("4_x25s1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd4n2"]
+atlas = ExtResource("4_x25s1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4isqh"]
+atlas = ExtResource("4_x25s1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5aq51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l833")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps1ao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as1t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntv3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sm60")
+}],
+"loop": 1,
+"name": &"nintendoN_Attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4c77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bfwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enl1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayyk1")
+}],
+"loop": 0,
+"name": &"nintendoN_Death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tbmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg8nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd4n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4isqh")
+}],
+"loop": 1,
+"name": &"nintendoN_Idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aq51"]
+size = Vector2(15.714289, 30.285713)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkmlx"]
+size = Vector2(19, 29.142859)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iupvx"]
+radius = 124.31854
+
+[node name="BlackEnemy" type="CharacterBody2D" unique_id=967094057 groups=["enemy"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_p0dfa")
+projectile_scene = ExtResource("2_s0l6n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1066125478 groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_5aq51")
+animation = &"nintendoN_Attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013523479]
+position = Vector2(0.7142854, 0.8571429)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_5aq51")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1300650386]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_6foc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1907520093]
+position = Vector2(0.49999937, 2.5714288)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_wkmlx")
+
+[node name="DetectionZone" type="Area2D" parent="." unique_id=2084421638]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone" unique_id=1069128682]
+shape = SubResource("CircleShape2D_iupvx")
+
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="DetectionZone" to="." method="_on_detection_zone_body_exited"]
