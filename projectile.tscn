@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://7yl3gnt4tpyi"]
+
+[ext_resource type="Texture2D" uid="uid://dfyn1twawvhfp" path="res://lawsuit_Papers.png" id="1_a85iw"]
+[ext_resource type="Script" uid="uid://bl7amjubqwbf2" path="res://projectile.gd" id="1_qxf0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aq51"]
+size = Vector2(8, 12)
+
+[node name="Projectile" type="Area2D" unique_id=1765328075]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_qxf0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1344610569]
+texture = ExtResource("1_a85iw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=74279414]
+shape = SubResource("RectangleShape2D_5aq51")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1507155322]

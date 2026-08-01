@@ -15,6 +15,11 @@ func _physics_process(_delta: float) -> void:
 		var collision := move_and_collide(velocity * _delta)
 
 		if collision:
+			var collider = collision.get_collider()
+			# if the object we hit has a die() function, it dies.
+			if collider != null and collider.has_method("die"):
+				collider.die()
+
 			flying = false
 			velocity = Vector2.ZERO
 			queue_free()
@@ -69,7 +74,8 @@ func throw_box() -> void:
 	flying = true
 
 	collision_layer = 1
-	collision_mask = 1
+	# Changed to 5 so it can hit the World (1) AND Enemies (4)
+	collision_mask = 5
 
 	velocity = Vector2(
 		direction * THROW_SPEED,

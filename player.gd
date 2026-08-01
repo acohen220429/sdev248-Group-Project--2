@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var foreground_tile_map: TileMapLayer = $"../ForegroundTileMap"
 @onready var coin_label: Label = $"../HUD/CoinLabel"
+@onready var stomp_box: Area2D = $StompBox
 
 const SPEED := 300.0
 const JUMP_VELOCITY := -400.0
@@ -16,6 +17,7 @@ var is_dead := false
 func _ready() -> void:
 	$PickupZone.body_entered.connect(_on_pickup_zone_body_entered)
 	$PickupZone.body_exited.connect(_on_pickup_zone_body_exited)
+	stomp_box.body_entered.connect(_on_stomp_box_body_entered)
 
 
 func _physics_process(delta: float) -> void:
@@ -131,3 +133,9 @@ func _collect_coins() -> void:
 
 			coin_count += 1
 			coin_label.text = "Coins: %d" % coin_count
+			
+
+func _on_stomp_box_body_entered(body: Node2D) -> void:
+	if velocity.y > 0 and body.has_method("die"):
+		body.die()
+		velocity.y = JUMP_VELOCITY

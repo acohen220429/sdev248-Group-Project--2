@@ -95,8 +95,13 @@ size = Vector2(20, 48)
 [sub_resource type="CircleShape2D" id="CircleShape2D_x50g6"]
 radius = 24.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1154717214]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aq51"]
+size = Vector2(20, 10)
+
+[node name="Player" type="CharacterBody2D" unique_id=1154717214 groups=["player"]]
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1386468596]
@@ -115,3 +120,10 @@ shape = SubResource("CircleShape2D_x50g6")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=333546923]
 zoom = Vector2(2.3, 2.3)
 position_smoothing_enabled = true
+
+[node name="StompBox" type="Area2D" parent="." unique_id=1976283469]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompBox" unique_id=1716300155]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_5aq51")
