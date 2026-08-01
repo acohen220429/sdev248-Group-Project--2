@@ -205,23 +205,11 @@ horizontal_alignment = 1
 [node name="RedEnemy" parent="Enemies" unique_id=1611105536 instance=ExtResource("6_n6hdu")]
 position = Vector2(463, 365)
 
-[node name="BlackEnemy" parent="Enemies" unique_id=967094057 instance=ExtResource("5_1ainy")]
-position = Vector2(554.00006, 284)
-
 [node name="RedEnemy2" parent="Enemies" unique_id=1496882529 instance=ExtResource("6_n6hdu")]
 position = Vector2(806, 381)
 
-[node name="BlackEnemy2" parent="Enemies" unique_id=376383203 instance=ExtResource("5_1ainy")]
-position = Vector2(880, 301)
-
 [node name="BlackEnemy3" parent="Enemies" unique_id=1405342786 instance=ExtResource("5_1ainy")]
 position = Vector2(1065, 301)
-
-[node name="BlackEnemy4" parent="Enemies" unique_id=1594073703 instance=ExtResource("5_1ainy")]
-position = Vector2(957.99994, 269)
-
-[node name="RedEnemy3" parent="Enemies" unique_id=1005242713 instance=ExtResource("6_n6hdu")]
-position = Vector2(969.99994, 397)
 
 [node name="RedEnemy4" parent="Enemies" unique_id=1221727366 instance=ExtResource("6_n6hdu")]
 position = Vector2(1125.0001, 381)
@@ -229,26 +217,11 @@ position = Vector2(1125.0001, 381)
 [node name="RedEnemy5" parent="Enemies" unique_id=300396292 instance=ExtResource("6_n6hdu")]
 position = Vector2(1364, 382)
 
-[node name="RedEnemy6" parent="Enemies" unique_id=1677751988 instance=ExtResource("6_n6hdu")]
-position = Vector2(1286, 381)
-
-[node name="BlackEnemy5" parent="Enemies" unique_id=1877585558 instance=ExtResource("5_1ainy")]
-position = Vector2(1425, 237)
-
 [node name="BlackEnemy6" parent="Enemies" unique_id=1471293658 instance=ExtResource("5_1ainy")]
 position = Vector2(1783.0001, 285)
 
-[node name="BlackEnemy7" parent="Enemies" unique_id=953274617 instance=ExtResource("5_1ainy")]
-position = Vector2(1929, 221)
-
 [node name="RedEnemy7" parent="Enemies" unique_id=894316432 instance=ExtResource("6_n6hdu")]
 position = Vector2(2217, 157)
-
-[node name="BlackEnemy8" parent="Enemies" unique_id=1402913694 instance=ExtResource("5_1ainy")]
-position = Vector2(2409.0002, 204)
-
-[node name="BlackEnemy9" parent="Enemies" unique_id=706049024 instance=ExtResource("5_1ainy")]
-position = Vector2(2602.9998, 157.99998)
 
 [node name="BlackEnemy10" parent="Enemies" unique_id=1851594123 instance=ExtResource("5_1ainy")]
 position = Vector2(2677.9998, 163.99998)
@@ -259,65 +232,23 @@ position = Vector2(2772, 236.99998)
 [node name="BlackEnemy11" parent="Enemies" unique_id=830582160 instance=ExtResource("5_1ainy")]
 position = Vector2(3511, 189)
 
-[node name="BlackEnemy12" parent="Enemies" unique_id=408337504 instance=ExtResource("5_1ainy")]
-position = Vector2(3730.9998, 189)
-
 [node name="RedEnemy9" parent="Enemies" unique_id=850457416 instance=ExtResource("6_n6hdu")]
 position = Vector2(3355, 252.99998)
 
 [node name="RedEnemy10" parent="Enemies" unique_id=597034971 instance=ExtResource("6_n6hdu")]
 position = Vector2(3952.9998, 220.99998)
 
-[node name="BlackEnemy13" parent="Enemies" unique_id=2013192655 instance=ExtResource("5_1ainy")]
-position = Vector2(4217.0005, 188.99998)
-
-[node name="BlackEnemy14" parent="Enemies" unique_id=867023767 instance=ExtResource("5_1ainy")]
-position = Vector2(1607, 349)
-
-[node name="BlackEnemy15" parent="Enemies" unique_id=43483291 instance=ExtResource("5_1ainy")]
-position = Vector2(2916, 204.99998)
-
-[node name="RedEnemy11" parent="Enemies" unique_id=1055191538 instance=ExtResource("6_n6hdu")]
-position = Vector2(2525, 237)
+[node name="RedEnemy11" parent="Enemies" unique_id=886886918 instance=ExtResource("6_n6hdu")]
+position = Vector2(4328, 188)
 
 [node name="RedEnemy12" parent="Enemies" unique_id=1229552673 instance=ExtResource("6_n6hdu")]
 position = Vector2(3056, 173.00002)
 
-[node name="BlackEnemy16" parent="Enemies" unique_id=1464181001 instance=ExtResource("5_1ainy")]
-position = Vector2(3272.9998, 156)
-
-[node name="RedEnemy13" parent="Enemies" unique_id=1708707087 instance=ExtResource("6_n6hdu")]
-position = Vector2(3490, 189)
-
 [node name="RedEnemy14" parent="Enemies" unique_id=2132275752 instance=ExtResource("6_n6hdu")]
 position = Vector2(3661, 253)
 
-[node name="RedEnemy15" parent="Enemies" unique_id=752088816 instance=ExtResource("6_n6hdu")]
-position = Vector2(3814.9998, 221)
-
-[node name="BlackEnemy17" parent="Enemies" unique_id=615772916 instance=ExtResource("5_1ainy")]
-position = Vector2(4489, 125.00001)
-
-[node name="BlackEnemy18" parent="Enemies" unique_id=156046701 instance=ExtResource("5_1ainy")]
-position = Vector2(4600, 12.999999)
-
-[node name="BlackEnemy19" parent="Enemies" unique_id=2046726962 instance=ExtResource("5_1ainy")]
-position = Vector2(4536, 78.99999)
-
-[node name="BlackEnemy20" parent="Enemies" unique_id=1678534020 instance=ExtResource("5_1ainy")]
-position = Vector2(4785.0005, -19)
-
-[node name="BlackEnemy21" parent="Enemies" unique_id=303698855 instance=ExtResource("5_1ainy")]
-position = Vector2(4929, -67)
-
 [node name="RedEnemy16" parent="Enemies" unique_id=1565466966 instance=ExtResource("6_n6hdu")]
 position = Vector2(4865, 12.999999)
-
-[node name="RedEnemy17" parent="Enemies" unique_id=570418727 instance=ExtResource("6_n6hdu")]
-position = Vector2(4983, 13)
-
-[node name="BlackEnemy22" parent="Enemies" unique_id=254158256 instance=ExtResource("5_1ainy")]
-position = Vector2(5041, -131)
 
 [node name="BlackEnemy23" parent="Enemies" unique_id=457234689 instance=ExtResource("5_1ainy")]
 position = Vector2(5136, -67)
@@ -328,38 +259,17 @@ position = Vector2(5087, 13.999998)
 [node name="RedEnemy19" parent="Enemies" unique_id=794239732 instance=ExtResource("6_n6hdu")]
 position = Vector2(5299, -195)
 
-[node name="RedEnemy20" parent="Enemies" unique_id=1629212574 instance=ExtResource("6_n6hdu")]
-position = Vector2(5230, -195)
-
-[node name="BlackEnemy24" parent="Enemies" unique_id=1371650473 instance=ExtResource("5_1ainy")]
-position = Vector2(5513, -306.99997)
-
 [node name="BlackEnemy25" parent="Enemies" unique_id=2044598183 instance=ExtResource("5_1ainy")]
 position = Vector2(5705, -307)
 
 [node name="RedEnemy21" parent="Enemies" unique_id=913964979 instance=ExtResource("6_n6hdu")]
 position = Vector2(5608, -275)
 
-[node name="BlackEnemy26" parent="Enemies" unique_id=1105209539 instance=ExtResource("5_1ainy")]
-position = Vector2(5465, -147)
-
 [node name="RedEnemy22" parent="Enemies" unique_id=1581689230 instance=ExtResource("6_n6hdu")]
 position = Vector2(5655, -99)
 
-[node name="RedEnemy23" parent="Enemies" unique_id=1167791741 instance=ExtResource("6_n6hdu")]
-position = Vector2(5554, -99)
-
-[node name="RedEnemy24" parent="Enemies" unique_id=1999178941 instance=ExtResource("6_n6hdu")]
-position = Vector2(5839.0005, -19.000002)
-
-[node name="BlackEnemy27" parent="Enemies" unique_id=1668592631 instance=ExtResource("5_1ainy")]
-position = Vector2(5961, -3.0000076)
-
 [node name="RedEnemy25" parent="Enemies" unique_id=12700996 instance=ExtResource("6_n6hdu")]
 position = Vector2(6079.0005, 12.999999)
-
-[node name="RedEnemy26" parent="Enemies" unique_id=2002512388 instance=ExtResource("6_n6hdu")]
-position = Vector2(6287, 28.999998)
 
 [node name="RedEnemy27" parent="Enemies" unique_id=1923583263 instance=ExtResource("6_n6hdu")]
 position = Vector2(6422, 28.999998)
@@ -367,23 +277,11 @@ position = Vector2(6422, 28.999998)
 [node name="RedEnemy28" parent="Enemies" unique_id=1391053599 instance=ExtResource("6_n6hdu")]
 position = Vector2(6547, 29)
 
-[node name="BlackEnemy28" parent="Enemies" unique_id=799101338 instance=ExtResource("5_1ainy")]
-position = Vector2(6665.9995, -36)
-
 [node name="RedEnemy29" parent="Enemies" unique_id=828822739 instance=ExtResource("6_n6hdu")]
 position = Vector2(6736, 28.999996)
 
 [node name="RedEnemy30" parent="Enemies" unique_id=1332524785 instance=ExtResource("6_n6hdu")]
 position = Vector2(6915.9995, 29)
 
-[node name="BlackEnemy29" parent="Enemies" unique_id=1640415169 instance=ExtResource("5_1ainy")]
-position = Vector2(6818, -115)
-
 [node name="BlackEnemy30" parent="Enemies" unique_id=1787890502 instance=ExtResource("5_1ainy")]
 position = Vector2(6916.0005, -51)
-
-[node name="BlackEnemy31" parent="Enemies" unique_id=341945263 instance=ExtResource("5_1ainy")]
-position = Vector2(7033, -147)
-
-[node name="BlackEnemy32" parent="Enemies" unique_id=1945603728 instance=ExtResource("5_1ainy")]
-position = Vector2(7097, -211)
