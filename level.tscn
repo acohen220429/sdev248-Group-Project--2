@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvyhakt0lh5te" path="res://black_enemy.tscn" id="5_1ainy"]
 [ext_resource type="PackedScene" uid="uid://dwx2d1idblg5" path="res://npc.tscn" id="5_f2txt"]
 [ext_resource type="PackedScene" uid="uid://xgekabc700i3" path="res://red_enemy.tscn" id="6_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://cgeatb3wnfng1" path="res://judge.tscn" id="8_km5ld"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vonw3"]
 
@@ -148,7 +149,7 @@ tile_map_data = PackedByteArray("AAAUABcAAAAAAAIAAAAVABcAAAAAAAIAAAAWABcAAAAAAAI
 tile_set = SubResource("TileSet_t0got")
 
 [node name="Player" parent="." unique_id=1154717214 instance=ExtResource("1_u52ul")]
-position = Vector2(223, 366)
+position = Vector2(239, 363)
 
 [node name="npc" parent="." unique_id=407830274 instance=ExtResource("5_f2txt")]
 position = Vector2(333, 369.00003)
@@ -165,6 +166,7 @@ label_settings = SubResource("LabelSettings_x50g6")
 
 [node name="KillZone" type="Area2D" parent="." unique_id=1272588238]
 collision_layer = 0
+collision_mask = 3
 script = ExtResource("3_oi3di")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1644248411]
@@ -275,9 +277,6 @@ position = Vector2(5655, -99)
 [node name="RedEnemy25" parent="Enemies" unique_id=12700996 instance=ExtResource("6_n6hdu")]
 position = Vector2(6079.0005, 12.999999)
 
-[node name="RedEnemy27" parent="Enemies" unique_id=1923583263 instance=ExtResource("6_n6hdu")]
-position = Vector2(6422, 28.999998)
-
 [node name="RedEnemy28" parent="Enemies" unique_id=1391053599 instance=ExtResource("6_n6hdu")]
 position = Vector2(6547, 29)
 
@@ -289,5 +288,8 @@ position = Vector2(6915.9995, 29)
 
 [node name="BlackEnemy30" parent="Enemies" unique_id=1787890502 instance=ExtResource("5_1ainy")]
 position = Vector2(6916.0005, -51)
+
+[node name="judge" parent="." unique_id=660137679 instance=ExtResource("8_km5ld")]
+position = Vector2(7371.0005, -244.00002)
 
 [editable path="npc"]

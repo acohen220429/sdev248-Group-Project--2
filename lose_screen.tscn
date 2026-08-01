@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cd212jdcbsrun"]
+
+[ext_resource type="Script" uid="uid://ch531xp3q7ykr" path="res://result_screen.gd" id="1_cbtnu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x50g6"]
+font_size = 50
+
+[node name="LoseScreen" type="Control" unique_id=696329863]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbtnu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1257964402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.41272357, 0.41469055, 0.4333313, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1247411468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1670800354]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1364984454]
+layout_mode = 2
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_x50g6")
+horizontal_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=124953437]
+layout_mode = 2
+text = "Replay"

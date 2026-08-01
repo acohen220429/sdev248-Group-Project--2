@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cgeatb3wnfng1"]
+
+[ext_resource type="Script" uid="uid://4mr6sao4ft57" path="res://judge.gd" id="1_16i11"]
+[ext_resource type="Texture2D" uid="uid://cgln6nk7x0cdb" path="res://Assets/judge-idle.png" id="2_16i11"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i3eg"]
+atlas = ExtResource("2_16i11")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so5y2"]
+atlas = ExtResource("2_16i11")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mjbl"]
+atlas = ExtResource("2_16i11")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x50g6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i3eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_so5y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mjbl")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtoym"]
+radius = 1800002.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxcha"]
+font_size = 18
+
+[node name="judge" type="Node2D" unique_id=407830274]
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("1_16i11")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1999275261]
+position = Vector2(8, -8)
+scale = Vector2(100000, 100000)
+sprite_frames = SubResource("SpriteFrames_x50g6")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1955768740]
+position = Vector2(-100002, -200002)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1356692358]
+position = Vector2(100000, 200000)
+shape = SubResource("CircleShape2D_xtoym")
+
+[node name="DialogueBox" type="Node2D" parent="." unique_id=1611381627]
+position = Vector2(0, -80)
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1357990265]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 556.0
+offset_bottom = 25.0
+label_settings = SubResource("LabelSettings_xxcha")
